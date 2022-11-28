@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.net.UnknownHostException;
 import java.util.List;
 
 @RestController
@@ -43,6 +44,15 @@ public class UserController {
 
         return ResponseEntity.created(location).build();
 
+    }
+
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id){
+        User user = service.deleteById(id);
+
+        if (user == null){
+            throw  new UserNotFoundException(String.format("Id[%s] not found", id));
+        }
     }
 
 }
