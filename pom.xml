@@ -62,6 +62,16 @@
             <artifactId>jackson-dataformat-xml</artifactId>
             <scope>2.10.2</scope>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <scope>2.9.2</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <scope>2.9.2</scope>
+        </dependency>
     </dependencies>
 
     <build>
